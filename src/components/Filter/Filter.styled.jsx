@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const FormWrap = styled(Form)`
   display: flex;
   flex-direction: column;
-  /* width: 400px; */
+  width: 400px;
   padding-bottom: 50px;
 `;
 

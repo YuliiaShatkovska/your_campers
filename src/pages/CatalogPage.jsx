@@ -20,15 +20,14 @@ const CatalogPage = () => {
     <Container>
       <CatalogWrap>
         <Filter />
-        {campers && (
-          <CatalogList>
-            {campers.map(camper => (
-              <CatalogItem key={camper._id}>
-                <Campers camper={camper} />
-              </CatalogItem>
-            ))}
-          </CatalogList>
-        )}
+
+        <CatalogList>
+          {campers.map(camper => (
+            <CatalogItem key={camper._id}>
+              <Campers camper={camper} />
+            </CatalogItem>
+          ))}
+        </CatalogList>
       </CatalogWrap>
     </Container>
   );
