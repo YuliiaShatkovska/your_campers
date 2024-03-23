@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/your_campers/static/css/main.841cd39a.css",
-    "main.js": "/your_campers/static/js/main.8042f8ab.js",
+    "main.js": "/your_campers/static/js/main.e6dd64bf.js",
     "static/js/983.4e852c1d.chunk.js": "/your_campers/static/js/983.4e852c1d.chunk.js",
-    "static/js/291.d497a34f.chunk.js": "/your_campers/static/js/291.d497a34f.chunk.js",
+    "static/js/291.afb199eb.chunk.js": "/your_campers/static/js/291.afb199eb.chunk.js",
     "static/js/339.4f5e069b.chunk.js": "/your_campers/static/js/339.4f5e069b.chunk.js",
     "static/js/705.9bec447e.chunk.js": "/your_campers/static/js/705.9bec447e.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/your_campers/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
@@ -12,14 +12,14 @@
     "static/media/icons.svg": "/your_campers/static/media/icons.0b78442fbb6f0705517b6461a08bf6ae.svg",
     "index.html": "/your_campers/index.html",
     "main.841cd39a.css.map": "/your_campers/static/css/main.841cd39a.css.map",
-    "main.8042f8ab.js.map": "/your_campers/static/js/main.8042f8ab.js.map",
+    "main.e6dd64bf.js.map": "/your_campers/static/js/main.e6dd64bf.js.map",
     "983.4e852c1d.chunk.js.map": "/your_campers/static/js/983.4e852c1d.chunk.js.map",
-    "291.d497a34f.chunk.js.map": "/your_campers/static/js/291.d497a34f.chunk.js.map",
+    "291.afb199eb.chunk.js.map": "/your_campers/static/js/291.afb199eb.chunk.js.map",
     "339.4f5e069b.chunk.js.map": "/your_campers/static/js/339.4f5e069b.chunk.js.map",
     "705.9bec447e.chunk.js.map": "/your_campers/static/js/705.9bec447e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.841cd39a.css",
-    "static/js/main.8042f8ab.js"
+    "static/js/main.e6dd64bf.js"
   ]
 }
