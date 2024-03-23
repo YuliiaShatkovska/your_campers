@@ -54,9 +54,6 @@ export const Filter = () => {
                   width={32}
                   height={32}
                   style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
                     paddingLeft: '12px',
                   }}
                 >

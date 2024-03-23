@@ -1,12 +1,19 @@
 import { Layout } from 'components/Layout/Layout';
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+// import { getCampers } from '../../redux/campers/operations';
+// import { useDispatch } from 'react-redux';
 
 const HomePage = lazy(() => import('../../pages/HomePage'));
 const CatalogPage = lazy(() => import('../../pages/CatalogPage'));
 const FavoritePage = lazy(() => import('../../pages/FavoritePage'));
 
 export const App = () => {
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(getCampers());
+  // }, [dispatch]);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
