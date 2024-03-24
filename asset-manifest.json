@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/your_campers/static/css/main.268d9270.css",
-    "main.js": "/your_campers/static/js/main.c2b93a2b.js",
+    "main.js": "/your_campers/static/js/main.1ffd3463.js",
     "static/js/877.452861f4.chunk.js": "/your_campers/static/js/877.452861f4.chunk.js",
     "static/js/656.51eca0d5.chunk.js": "/your_campers/static/js/656.51eca0d5.chunk.js",
     "static/js/339.46a36a1c.chunk.js": "/your_campers/static/js/339.46a36a1c.chunk.js",
     "static/js/815.f46712a3.chunk.js": "/your_campers/static/js/815.f46712a3.chunk.js",
     "static/js/196.7c2e5913.chunk.js": "/your_campers/static/js/196.7c2e5913.chunk.js",
-    "static/js/756.20123f76.chunk.js": "/your_campers/static/js/756.20123f76.chunk.js",
+    "static/js/756.4240e4c7.chunk.js": "/your_campers/static/js/756.4240e4c7.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/your_campers/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/your_campers/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/your_campers/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/icons.svg": "/your_campers/static/media/icons.0b78442fbb6f0705517b6461a08bf6ae.svg",
     "index.html": "/your_campers/index.html",
     "main.268d9270.css.map": "/your_campers/static/css/main.268d9270.css.map",
-    "main.c2b93a2b.js.map": "/your_campers/static/js/main.c2b93a2b.js.map",
+    "main.1ffd3463.js.map": "/your_campers/static/js/main.1ffd3463.js.map",
     "877.452861f4.chunk.js.map": "/your_campers/static/js/877.452861f4.chunk.js.map",
     "656.51eca0d5.chunk.js.map": "/your_campers/static/js/656.51eca0d5.chunk.js.map",
     "339.46a36a1c.chunk.js.map": "/your_campers/static/js/339.46a36a1c.chunk.js.map",
     "815.f46712a3.chunk.js.map": "/your_campers/static/js/815.f46712a3.chunk.js.map",
     "196.7c2e5913.chunk.js.map": "/your_campers/static/js/196.7c2e5913.chunk.js.map",
-    "756.20123f76.chunk.js.map": "/your_campers/static/js/756.20123f76.chunk.js.map"
+    "756.4240e4c7.chunk.js.map": "/your_campers/static/js/756.4240e4c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.268d9270.css",
-    "static/js/main.c2b93a2b.js"
+    "static/js/main.1ffd3463.js"
   ]
 }
