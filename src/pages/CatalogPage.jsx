@@ -1,33 +1,59 @@
 import { Container } from 'components/App/App.styled';
-import { CatalogItem, CatalogList, CatalogWrap } from './CatalogPage.styled';
+import {
+  CatalogItem,
+  CatalogList,
+  CatalogWrap,
+  LoadMoreBtn,
+} from './CatalogPage.styled';
 import { Filter } from 'components/Filter/Filter';
 import { Campers } from 'components/Campers/Campers';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getCampers } from '../redux/campers/operations';
-import { selectCampers } from '../redux/campers/selectors';
+import { selectCampers, selectTotal } from '../redux/campers/selectors';
 
 const CatalogPage = () => {
+  const [page, setPage] = useState(1);
+  const [showLoadMore, setShowLoadMore] = useState(true);
+
+  const campers = useSelector(selectCampers);
+  const total = useSelector(selectTotal);
+  const limit = 4;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCampers());
-  }, [dispatch]);
+    setShowLoadMore(true);
 
-  const campers = useSelector(selectCampers);
+    setShowLoadMore(page < Math.ceil(total / limit));
+
+    dispatch(getCampers({ page, limit }));
+  }, [dispatch, page, total]);
+
+  const handleLoadMore = () => {
+    setPage(prev => prev + 1);
+  };
 
   return (
     <Container>
       <CatalogWrap>
         <Filter />
 
-        <CatalogList>
-          {campers.map(camper => (
-            <CatalogItem key={camper._id}>
-              <Campers camper={camper} />
-            </CatalogItem>
-          ))}
-        </CatalogList>
+        <div>
+          <CatalogList>
+            {campers.map(camper => (
+              <CatalogItem key={camper._id}>
+                <Campers camper={camper} />
+              </CatalogItem>
+            ))}
+          </CatalogList>
+
+          {showLoadMore && campers.length > 0 && (
+            <LoadMoreBtn type="button" onClick={handleLoadMore}>
+              Load More
+            </LoadMoreBtn>
+          )}
+        </div>
       </CatalogWrap>
     </Container>
   );

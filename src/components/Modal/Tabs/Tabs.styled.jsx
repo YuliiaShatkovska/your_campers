@@ -23,6 +23,7 @@ export const Tab = styled.button`
 
 export const TabsContentBox = styled.div`
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
+
   margin-top: 44px;
 `;

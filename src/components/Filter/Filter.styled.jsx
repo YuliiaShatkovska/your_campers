@@ -21,7 +21,7 @@ export const LacationLabel = styled.label`
   font-weight: 500;
 `;
 
-export const LocationInput = styled(Field)`
+export const StyledInput = styled(Field)`
   padding: 18px 18px 18px 38px;
   border-radius: 10px;
   background-color: #f7f7f7;
@@ -31,6 +31,7 @@ export const LocationInput = styled(Field)`
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
+  width: 100%;
 
   &:focus {
     opacity: 1;
@@ -77,6 +78,7 @@ export const CheckboxLabel = styled.label`
   mix-blend-mode: multiply;
   padding: 12px;
   width: 94px;
+  cursor: pointer;
 
   &:focus,
   &:hover,

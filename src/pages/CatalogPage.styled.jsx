@@ -12,6 +12,7 @@ export const CatalogList = styled.ul`
   flex-direction: column;
   gap: 32px;
   width: 860px;
+  margin-bottom: 50px;
 `;
 
 export const CatalogItem = styled.li`
@@ -25,4 +26,23 @@ export const CatalogItem = styled.li`
   background: #fff;
 
   position: relative;
+`;
+
+export const LoadMoreBtn = styled.button`
+  display: block;
+  margin: 0 auto;
+  padding: 16px 32px;
+  border-radius: 200px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+
+  &:hover,
+  &:focus {
+    border-color: #e44848;
+  }
 `;

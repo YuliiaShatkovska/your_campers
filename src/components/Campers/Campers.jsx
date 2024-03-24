@@ -1,8 +1,7 @@
-// import { useSelector } from 'react-redux';
-// import { selectCampers } from '../../redux/campers/selectors';
 import { useState } from 'react';
 import sprite from '../../helpers/icons/icons.svg';
 import {
+  AddToFavoriteBtn,
   CamperDescription,
   CamperName,
   CamperPrice,
@@ -17,25 +16,37 @@ import {
 } from './Campers.styled';
 import { Button } from 'components/Filter/Filter.styled';
 import { Modal } from 'components/Modal/Modal';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavorite } from '../../redux/campers/selectors';
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from '../../redux/campers/campersSlice';
+import { PiCurrencyEur } from 'react-icons/pi';
 
 export const Campers = ({ camper }) => {
   const [showMadal, setShowMadal] = useState(false);
 
+  const dispatch = useDispatch();
+
   const toggleModal = () => {
     setShowMadal(prev => !prev);
   };
-  // const campers = useSelector(selectCampers);
 
-  // const onClickToFavorite = () => {};
+  const favorites = useSelector(selectFavorite);
+
+  const isCardFavorite = favorites.find(fav => fav._id === camper._id);
+
+  const onClickToFavorite = () => {
+    isCardFavorite
+      ? dispatch(removeFromFavorites(camper._id))
+      : dispatch(addToFavorites(camper));
+  };
 
   return (
     <>
       <div style={{ width: '290px', height: '310px' }}>
-        <CatalogImage
-          src={camper.gallery[0]}
-          alt="camper"
-          // width={200}
-        />
+        <CatalogImage src={camper.gallery[0]} alt="camper" />
       </div>
 
       <div>
@@ -129,38 +140,23 @@ export const Campers = ({ camper }) => {
           gap: '11px',
         }}
       >
-        <CamperPrice>${camper.price}</CamperPrice>
-        <button type="button">
+        <CamperPrice>
+          <PiCurrencyEur size={26} style={{ fill: '#101828' }} />
+          {camper.price}
+        </CamperPrice>
+        <AddToFavoriteBtn
+          type="button"
+          aria-label="Add to favorites"
+          $isFavorite={!!isCardFavorite}
+          onClick={onClickToFavorite}
+        >
           <DetailsIcons width={24} height={24}>
             <use href={`${sprite}#icon-heart`}></use>
           </DetailsIcons>
-        </button>
+        </AddToFavoriteBtn>
       </div>
 
       {showMadal && <Modal onClose={toggleModal} campers={camper} />}
-
-      {/* <ul>
-        {campers.map(camper => (
-          <li key={camper._id}>
-            <img src={camper.gallery[0]} alt="" />
-            <p>{camper.name}</p>
-            <p>
-              <svg width={16} height={16}>
-                <use href={`${sprite}#icon-star`}></use>
-              </svg>
-              {camper.rating}({camper.reviews.length} Reviews)
-            </p>
-            <p>
-              <svg width={16} height={16}>
-                <use href={`${sprite}#icon-map-pin`}></use>
-              </svg>
-              {camper.location}
-            </p>
-            <p>{camper.description}</p>
-           
-          </li>
-        ))}
-      </ul> */}
     </>
   );
 };

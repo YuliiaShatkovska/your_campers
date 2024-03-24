@@ -67,7 +67,19 @@ export const DetailsIcons = styled.svg`
 `;
 
 export const CamperPrice = styled.p`
+  display: flex;
+  align-items: center;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.5;
+`;
+
+export const AddToFavoriteBtn = styled.button`
+  &:focus {
+    color: #e44848;
+  }
+
+  &:focus svg {
+    fill: #e44848;
+  }
 `;

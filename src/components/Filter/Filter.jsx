@@ -9,7 +9,7 @@ import {
   IconPin,
   InputWrap,
   LacationLabel,
-  LocationInput,
+  StyledInput,
 } from './Filter.styled';
 
 import sprite from '../../helpers/icons/icons.svg';
@@ -29,7 +29,12 @@ export const Filter = () => {
         <FormWrap>
           <InputWrap>
             <LacationLabel htmlFor="location">Location</LacationLabel>
-            <LocationInput id="location" name="location" placeholder="City" />
+            <StyledInput
+              id="location"
+              name="location"
+              placeholder="City"
+              style={{ width: 'unset' }}
+            />
             <IconPin width={18} height={20}>
               <use href={`${sprite}#icon-map-pin`}></use>
             </IconPin>
