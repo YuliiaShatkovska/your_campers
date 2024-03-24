@@ -7,7 +7,6 @@ import {
 import sprite from '../../helpers/icons/icons.svg';
 
 export const IconList = ({ camper }) => {
-  console.log(camper);
   return (
     <>
       <IconsList>
