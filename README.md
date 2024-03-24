@@ -5,5 +5,5 @@
 1. Склонуй репозиторій використовуючи:
 
 ```json
-"  git clone https://github.com/lizaklimova/campers-ukraine"
+"git clone https://github.com/YuliiaShatkovska/campers-ukraine"
 ```
