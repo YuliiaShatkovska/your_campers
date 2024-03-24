@@ -13,6 +13,12 @@ export const CamperName = styled.p`
   margin-bottom: 8px;
 `;
 
+export const RatingLocationBox = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+`;
+
 export const RatingWrap = styled.p`
   display: flex;
   align-items: center;

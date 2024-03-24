@@ -1,5 +1,6 @@
 // import { useSelector } from 'react-redux';
 // import { selectCampers } from '../../redux/campers/selectors';
+import { useState } from 'react';
 import sprite from '../../helpers/icons/icons.svg';
 import {
   CamperDescription,
@@ -11,11 +12,18 @@ import {
   IconText,
   IconsList,
   LocationWrap,
+  RatingLocationBox,
   RatingWrap,
 } from './Campers.styled';
 import { Button } from 'components/Filter/Filter.styled';
+import { Modal } from 'components/Modal/Modal';
 
 export const Campers = ({ camper }) => {
+  const [showMadal, setShowMadal] = useState(false);
+
+  const toggleModal = () => {
+    setShowMadal(prev => !prev);
+  };
   // const campers = useSelector(selectCampers);
 
   // const onClickToFavorite = () => {};
@@ -33,7 +41,7 @@ export const Campers = ({ camper }) => {
       <div>
         <CamperName>{camper.name}</CamperName>
 
-        <div style={{ display: 'flex', gap: '16px', marginBottom: '24px' }}>
+        <RatingLocationBox>
           <RatingWrap>
             <svg width={16} height={16}>
               <use href={`${sprite}#icon-star`}></use>
@@ -47,7 +55,7 @@ export const Campers = ({ camper }) => {
             </DetailsIcons>
             {camper.location}
           </LocationWrap>
-        </div>
+        </RatingLocationBox>
 
         <CamperDescription>{camper.description}</CamperDescription>
 
@@ -63,7 +71,7 @@ export const Campers = ({ camper }) => {
             <svg width={20} height={20}>
               <use href={`${sprite}#icon-man2`}></use>
             </svg>
-            <p>{camper.transmission}</p>
+            <IconText>{camper.transmission}</IconText>
           </IconItem>
 
           <IconItem>
@@ -104,7 +112,11 @@ export const Campers = ({ camper }) => {
           </IconItem>
         </IconsList>
 
-        <Button type="button" style={{ padding: '16px 40px', width: '166px' }}>
+        <Button
+          onClick={toggleModal}
+          type="button"
+          style={{ padding: '16px 40px', width: '166px' }}
+        >
           Show more
         </Button>
       </div>
@@ -124,6 +136,8 @@ export const Campers = ({ camper }) => {
           </DetailsIcons>
         </button>
       </div>
+
+      {showMadal && <Modal onClose={toggleModal} campers={camper} />}
 
       {/* <ul>
         {campers.map(camper => (
