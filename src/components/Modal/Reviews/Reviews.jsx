@@ -3,7 +3,6 @@ import { Description, Name, ReviewsWrap } from './Reviews.styled';
 import sprite from '../../../helpers/icons/icons.svg';
 
 export const Reviews = ({ camper }) => {
-  console.log(camper.reviews);
   return (
     <div>
       <ReviewsWrap>
