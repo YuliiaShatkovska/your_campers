@@ -12,7 +12,6 @@ const FavoritePage = () => {
 
   return (
     <Container>
-      {/* <h1>favorite</h1> */}
       <CatalogList
         style={{ paddingTop: '50px', margin: '0 auto', width: '980px' }}
       >

@@ -20,7 +20,7 @@ export const ModalWrap = styled.div`
   background-color: #fff;
   max-width: 982px;
   padding: 40px;
-  height: 900px;
+  height: 750px;
   overflow: scroll;
 `;
 

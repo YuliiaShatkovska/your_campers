@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TabsList = styled.ul`
   display: flex;
   gap: 40px;
-  /* padding-bottom: 24px; */
+
   border-bottom: 1px solid rgba(16, 24, 40, 0.2);
 `;
 

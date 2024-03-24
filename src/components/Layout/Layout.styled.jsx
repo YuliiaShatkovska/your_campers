@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.header`
@@ -20,4 +21,14 @@ export const Header = styled.header`
 export const LinkWrap = styled.div`
   display: flex;
   gap: 16px;
+`;
+
+export const HeaderLink = styled(NavLink)`
+  color: #475467;
+  font-size: 18px;
+
+  &:hover,
+  &:focus {
+    color: #e44848;
+  }
 `;
