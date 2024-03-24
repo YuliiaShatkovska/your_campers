@@ -1,17 +1,8 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Backdrop, CloseBtn, GalleryList, ModalWrap } from './Modal.styled';
+import { Backdrop, CloseBtn, ModalWrap } from './Modal.styled';
 import sprite from '../../helpers/icons/icons.svg';
-import {
-  CamperDescription,
-  CamperName,
-  CamperPrice,
-  CatalogImage,
-  DetailsIcons,
-  LocationWrap,
-  RatingLocationBox,
-  RatingWrap,
-} from 'components/Campers/Campers.styled';
+
 import { Tabs } from './Tabs/Tabs';
 import { CamperInfo } from './CamperInfo/CamperInfo';
 
