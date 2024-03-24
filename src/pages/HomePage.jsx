@@ -1,6 +1,4 @@
 import { Container } from 'components/App/App.styled';
-import { useSelector } from 'react-redux';
-import { selectCampers } from '../redux/campers/selectors';
 
 import {
   HomeLink,
@@ -14,9 +12,6 @@ import { DetailsIcons } from 'components/Campers/Campers.styled';
 import sprite from '../helpers/icons/icons.svg';
 
 const HomePage = () => {
-  const campers = useSelector(selectCampers);
-  console.log(campers);
-
   return (
     <HomeWrap>
       <Container>

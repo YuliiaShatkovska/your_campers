@@ -12,7 +12,6 @@ export const getCampers = createAsyncThunk(
     };
     try {
       const { data } = await axios.get('/campers', { params: axiosParams });
-      console.log(data);
 
       return data;
     } catch (error) {
